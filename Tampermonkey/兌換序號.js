@@ -16,7 +16,8 @@
             $('button#couponCheckBtn').click();
 
             setTimeout(()=>{
-                $('input[type=text]#couponSerial').attr('readonly') && alert = () => {} && $('button#couponUseBtn').click();
+                alert = () => {} 
+                $('input[type=text]#couponSerial').attr('readonly') && $('button#couponUseBtn').click();
             }, 1000);
 
             return;
