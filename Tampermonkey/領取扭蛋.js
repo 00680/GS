@@ -10,6 +10,6 @@
 
 (function() {
     'use strict';
-
-    $('button.sendItemButton')[0] && alert = () => {} && $('button.sendItemButton')[0].click();
+    alert = () => {};
+    $('button.sendItemButton')[0] && $('button.sendItemButton')[0].click();
 })();
