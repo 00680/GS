@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         快樂玩自動兌換序號
+// @namespace    GS tam
 // @version      0.1
 // @description  快樂玩自動兌換序號
 // @author       00680
