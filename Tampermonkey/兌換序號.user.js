@@ -8,19 +8,16 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    $('input[type=text]#couponSerial').change(
-        () => {
-            $('button#couponCheckBtn').click();
-
-            setTimeout(()=>{
-                alert = () => {} 
-                $('input[type=text]#couponSerial').attr('readonly') && $('button#couponUseBtn').click();
-            }, 1000);
-
-            return;
-        }
-    )
+  if ($('input.btn.btn-danger')[0]) {
+    $('input.btn.btn-danger')[0].click();
+    $('button#couponCheckBtn').click();
+    setTimeout(() => {
+      alert = () => {};
+      $('input[type=text]#couponSerial').attr('readonly') &&
+        $('button#couponUseBtn').click();
+    }, 1000);
+  }
 })();
