@@ -7,9 +7,18 @@ function OnEvent(event, arg)
         started = true
 
         local minX, minY, maxX, maxY = getCorners()
+        
         local width = getWidth(minX, maxX)
         local height = getHeight(minY, maxY)
         OutputLogMessage("width=%s, height=%s\n", width, height)
+
+        local absFirstBoxX = calcX(minX ,width ,0.6031141769)
+        local absFirstBoxY = calcY(minY ,height ,0.494144026)
+        OutputLogMessage("absFirstBoxX = %s, absFirstBoxY = %s\n", absFirstBoxX,absFirstBoxY)
+
+        local absSecondBoxX = calcX(minX, width, 0.6021582322)
+        local absSecondBoxY = calcY(minY, height, 0.5853966891)
+        OutputLogMessage("absSecondBoxX=%s, absSecondBoxY=%s\n", absSecondBoxX, absSecondBoxY)
 
         local absStrengthenBoxX = calcX(minX, width, 0.3010848098)
         local absStrengthenBoxY = calcY(minY, height, 0.4537127591)
@@ -26,10 +35,6 @@ function OnEvent(event, arg)
         local absStrengthenDoneX = calcX(minX, width, 0.5317571629)
         local absStrengthenDoneY = calcY(minY, height, 0.5423753071)
         OutputLogMessage("absStrengthenDoneX=%s, absStrengthenDoneX=%s\n", absStrengthenDoneX, absStrengthenDoneY)
-
-        local absSecondBoxX = calcX(minX, width, 0.6021582322)
-        local absSecondBoxY = calcY(minY, height, 0.5853966891)
-        OutputLogMessage("absSecondBoxX=%s, absSecondBoxY=%s\n", absSecondBoxX, absSecondBoxY)
 
         repeat
             moveMouse(absFirstBoxX, absFirstBoxY) --第一格
