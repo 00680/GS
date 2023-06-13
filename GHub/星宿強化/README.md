@@ -17,12 +17,4 @@
 
 ## 已知問題
 1. 強化後調位導致無法繼續強化
-   1. 可先刪除 56-60行
-   ```
-    moveMouse(absSecondBoxX, absSecondBoxY) --第二格
-    leftClick() --拎起
-    moveMouse(absFirstBoxX, absFirstBoxY) --第一格
-    leftClick() --放低
-    rightClick()
-    ```
-   2. 或 第一行第一格, 第二行第一格分別放上不同星宿 同時強化
+   1. 重登
