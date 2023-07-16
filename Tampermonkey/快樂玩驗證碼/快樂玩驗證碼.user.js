@@ -15,7 +15,9 @@
     codeField.type = 'password';
     codeField.maxLength = 16;
     codeField.addEventListener("change", () => {
-        const totp = new jsOTP.totp();
-        codeField.value = totp.getOtp(codeField.value);
+        if (codeField.value.length === 16){
+            const totp = new jsOTP.totp();
+            codeField.value = totp.getOtp(codeField.value);
+        }
     })
 })();
