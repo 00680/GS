@@ -1,0 +1,11 @@
+{
+  "userProfiles": [
+    {
+      "profileName": "test",
+      "username": "username1",
+      "password": "pwd",
+      "otpSecretKey": "WEGW23523ERWGEG",
+      "runExePath": "c:\\Gersang\\run.exe"
+    }
+  ]
+}
