@@ -11,5 +11,13 @@
 (function() {
     'use strict';
     alert = () => {};
-    $('button.sendItemButton')[0] && $('button.sendItemButton')[0].click();
+    if (document.querySelectorAll(".sendItemButton").length > 0) {
+        gachaMall.openModal($("#processingModal"));
+
+        setTimeout(function () {
+            // confirmModal complate message HTML
+            $("#complateMessage").html("");
+            multiSendItemProc();
+        }, 1000);
+    }
 })();
